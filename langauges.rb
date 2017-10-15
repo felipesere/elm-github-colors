@@ -47,12 +47,24 @@ CASE
 end
 
 puts <<-TEMPLATE
-module Language exposing (..)
+module Language exposing (Language, fromString, toColor)
 
+{-| This library provides a union type for languges for which Github provides color codes and their respective color
+
+@docs Language, fromString, toColor
+
+-}
+
+
+{-| The union type of all languages supported by Github 
+-}
 type Language
     = Other
 #{all_langs_in_type_case(json)}
 
+
+{-| Parse a string to a lanuge. Unrecognized strings get turned into Other
+-}
 fromString : String -> Language
 fromString raw =
     case raw of
@@ -61,8 +73,10 @@ fromString raw =
             Other
 
 
-color : Language -> String
-color language =
+{-| Convert a languges to its respective color code
+-}
+toColor : Language -> String
+toColor language =
     case language of
 #{type_to_color_mapping(json)}
         Other ->

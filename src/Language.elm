@@ -1,6 +1,14 @@
-module Language exposing (..)
+module Language exposing (Language, fromString, toColor)
+
+{-| This library provides a union type for languges for which Github provides color codes and their respective color
+
+@docs Language, fromString, toColor
+
+-}
 
 
+{-| The union type of all languages supported by Github 
+-}
 type Language
     = Other
     | OneCEnterprise
@@ -354,6 +362,8 @@ type Language
     | Zimpl
 
 
+{-| Parse a string to a lanuge. Unrecognized strings get turned into Other
+-}
 fromString : String -> Language
 fromString raw =
     case raw of
@@ -1408,1055 +1418,1057 @@ fromString raw =
             Other
 
 
-color : Language -> String
-color language =
+{-| Convert a languges to its respective color code
+-}
+toColor : Language -> String
+toColor language =
     case language of
         OneCEnterprise ->
-            "#814CCC"
+           "#814CCC"
 
         ABAP ->
-            "#E8274B"
+           "#E8274B"
 
         ActionScript ->
-            "#882B0F"
+           "#882B0F"
 
         Ada ->
-            "#02f88c"
+           "#02f88c"
 
         Agda ->
-            "#315665"
+           "#315665"
 
         AGSScript ->
-            "#B9D9FF"
+           "#B9D9FF"
 
         Alloy ->
-            "#64C800"
+           "#64C800"
 
         AlpineAbuild ->
-            "grey"
+           "grey"
 
         AMPL ->
-            "#E6EFBB"
+           "#E6EFBB"
 
         ANTLR ->
-            "#9DC3FF"
+           "#9DC3FF"
 
         Apex ->
-            "grey"
+           "grey"
 
         APIBlueprint ->
-            "#2ACCA8"
+           "#2ACCA8"
 
         APL ->
-            "#5A8164"
+           "#5A8164"
 
         ApolloGuidanceComputer ->
-            "grey"
+           "grey"
 
         AppleScript ->
-            "#101F1F"
+           "#101F1F"
 
         Arc ->
-            "#aa2afe"
+           "#aa2afe"
 
         Arduino ->
-            "#bd79d1"
+           "#bd79d1"
 
         ASP ->
-            "#6a40fd"
+           "#6a40fd"
 
         AspectJ ->
-            "#a957b0"
+           "#a957b0"
 
         Assembly ->
-            "#6E4C13"
+           "#6E4C13"
 
         ATS ->
-            "#1ac620"
+           "#1ac620"
 
         Augeas ->
-            "grey"
+           "grey"
 
         AutoHotkey ->
-            "#6594b9"
+           "#6594b9"
 
         AutoIt ->
-            "#1C3552"
+           "#1C3552"
 
         Awk ->
-            "grey"
+           "grey"
 
         Ballerina ->
-            "#FF5000"
+           "#FF5000"
 
         Batchfile ->
-            "#C1F12E"
+           "#C1F12E"
 
         Befunge ->
-            "grey"
+           "grey"
 
         Bison ->
-            "grey"
+           "grey"
 
         BitBake ->
-            "grey"
+           "grey"
 
         BlitzBasic ->
-            "grey"
+           "grey"
 
         BlitzMax ->
-            "#cd6400"
+           "#cd6400"
 
         Bluespec ->
-            "grey"
+           "grey"
 
         Boo ->
-            "#d4bec1"
+           "#d4bec1"
 
         Brainfuck ->
-            "#2F2530"
+           "#2F2530"
 
         Brightscript ->
-            "grey"
+           "grey"
 
         Bro ->
-            "grey"
+           "grey"
 
         C ->
-            "#555555"
+           "#555555"
 
         CSharp ->
-            "#178600"
+           "#178600"
 
         CPlusPlus ->
-            "#f34b7d"
+           "#f34b7d"
 
         C2hsHaskell ->
-            "grey"
+           "grey"
 
         CapnProto ->
-            "grey"
+           "grey"
 
         CartoCSS ->
-            "grey"
+           "grey"
 
         Ceylon ->
-            "#dfa535"
+           "#dfa535"
 
         Chapel ->
-            "#8dc63f"
+           "#8dc63f"
 
         Charity ->
-            "grey"
+           "grey"
 
         ChucK ->
-            "grey"
+           "grey"
 
         Cirru ->
-            "#ccccff"
+           "#ccccff"
 
         Clarion ->
-            "#db901e"
+           "#db901e"
 
         Clean ->
-            "#3F85AF"
+           "#3F85AF"
 
         Click ->
-            "#E4E6F3"
+           "#E4E6F3"
 
         CLIPS ->
-            "grey"
+           "grey"
 
         Clojure ->
-            "#db5855"
+           "#db5855"
 
         CMake ->
-            "grey"
+           "grey"
 
         COBOL ->
-            "grey"
+           "grey"
 
         CoffeeScript ->
-            "#244776"
+           "#244776"
 
         ColdFusion ->
-            "#ed2cd6"
+           "#ed2cd6"
 
         ColdFusionCFC ->
-            "grey"
+           "grey"
 
         CommonLisp ->
-            "#3fb68b"
+           "#3fb68b"
 
         ComponentPascal ->
-            "#B0CE4E"
+           "#B0CE4E"
 
         Cool ->
-            "grey"
+           "grey"
 
         Coq ->
-            "grey"
+           "grey"
 
         Crystal ->
-            "#776791"
+           "#776791"
 
         Csound ->
-            "grey"
+           "grey"
 
         CsoundDocument ->
-            "grey"
+           "grey"
 
         CsoundScore ->
-            "grey"
+           "grey"
 
         CSS ->
-            "#563d7c"
+           "#563d7c"
 
         Cuda ->
-            "#3A4E3A"
+           "#3A4E3A"
 
         CWeb ->
-            "grey"
+           "grey"
 
         Cycript ->
-            "grey"
+           "grey"
 
         Cython ->
-            "grey"
+           "grey"
 
         D ->
-            "#ba595e"
+           "#ba595e"
 
         Dart ->
-            "#00B4AB"
+           "#00B4AB"
 
         DataWeave ->
-            "#003a52"
+           "#003a52"
 
         DIGITALCommandLanguage ->
-            "grey"
+           "grey"
 
         DM ->
-            "#447265"
+           "#447265"
 
         Dogescript ->
-            "#cca760"
+           "#cca760"
 
         DTrace ->
-            "grey"
+           "grey"
 
         Dylan ->
-            "#6c616e"
+           "#6c616e"
 
         E ->
-            "#ccce35"
+           "#ccce35"
 
         EC ->
-            "#913960"
+           "#913960"
 
         ECL ->
-            "#8a1267"
+           "#8a1267"
 
         ECLiPSe ->
-            "grey"
+           "grey"
 
         Eiffel ->
-            "#946d57"
+           "#946d57"
 
         Elixir ->
-            "#6e4a7e"
+           "#6e4a7e"
 
         Elm ->
-            "#60B5CC"
+           "#60B5CC"
 
         EmacsLisp ->
-            "#c065db"
+           "#c065db"
 
         EmberScript ->
-            "#FFF4F3"
+           "#FFF4F3"
 
         EQ ->
-            "#a78649"
+           "#a78649"
 
         Erlang ->
-            "#B83998"
+           "#B83998"
 
         FSharp ->
-            "#b845fc"
+           "#b845fc"
 
         Factor ->
-            "#636746"
+           "#636746"
 
         Fancy ->
-            "#7b9db4"
+           "#7b9db4"
 
         Fantom ->
-            "#14253c"
+           "#14253c"
 
         FilebenchWML ->
-            "grey"
+           "grey"
 
         Filterscript ->
-            "grey"
+           "grey"
 
         Fish ->
-            "grey"
+           "grey"
 
         FLUX ->
-            "#88ccff"
+           "#88ccff"
 
         Forth ->
-            "#341708"
+           "#341708"
 
         Fortran ->
-            "#4d41b1"
+           "#4d41b1"
 
         FreeMarker ->
-            "#0050b2"
+           "#0050b2"
 
         Frege ->
-            "#00cafe"
+           "#00cafe"
 
         GameMakerLanguage ->
-            "#8fb200"
+           "#8fb200"
 
         GAMS ->
-            "grey"
+           "grey"
 
         GAP ->
-            "grey"
+           "grey"
 
         GCCMachineDescription ->
-            "grey"
+           "grey"
 
         GDB ->
-            "grey"
+           "grey"
 
         GDScript ->
-            "grey"
+           "grey"
 
         Genie ->
-            "#fb855d"
+           "#fb855d"
 
         Genshi ->
-            "grey"
+           "grey"
 
         GentooEbuild ->
-            "grey"
+           "grey"
 
         GentooEclass ->
-            "grey"
+           "grey"
 
         Gherkin ->
-            "#5B2063"
+           "#5B2063"
 
         GLSL ->
-            "grey"
+           "grey"
 
         Glyph ->
-            "#e4cc98"
+           "#e4cc98"
 
         Gnuplot ->
-            "#f0a9f0"
+           "#f0a9f0"
 
         Go ->
-            "#375eab"
+           "#375eab"
 
         Golo ->
-            "#88562A"
+           "#88562A"
 
         Gosu ->
-            "#82937f"
+           "#82937f"
 
         Grace ->
-            "grey"
+           "grey"
 
         GrammaticalFramework ->
-            "#79aa7a"
+           "#79aa7a"
 
         Groovy ->
-            "#e69f56"
+           "#e69f56"
 
         GroovyServerPages ->
-            "grey"
+           "grey"
 
         Hack ->
-            "#878787"
+           "#878787"
 
         Harbour ->
-            "#0e60e3"
+           "#0e60e3"
 
         Haskell ->
-            "#5e5086"
+           "#5e5086"
 
         Haxe ->
-            "#df7900"
+           "#df7900"
 
         HCL ->
-            "grey"
+           "grey"
 
         HLSL ->
-            "grey"
+           "grey"
 
         HTML ->
-            "#e34c26"
+           "#e34c26"
 
         Hy ->
-            "#7790B2"
+           "#7790B2"
 
         HyPhy ->
-            "grey"
+           "grey"
 
         IDL ->
-            "#a3522f"
+           "#a3522f"
 
         Idris ->
-            "grey"
+           "grey"
 
         IGORPro ->
-            "grey"
+           "grey"
 
         Inform7 ->
-            "grey"
+           "grey"
 
         InnoSetup ->
-            "grey"
+           "grey"
 
         Io ->
-            "#a9188d"
+           "#a9188d"
 
         Ioke ->
-            "#078193"
+           "#078193"
 
         Isabelle ->
-            "#FEFE00"
+           "#FEFE00"
 
         IsabelleROOT ->
-            "grey"
+           "grey"
 
         J ->
-            "#9EEDFF"
+           "#9EEDFF"
 
         Jasmin ->
-            "grey"
+           "grey"
 
         Java ->
-            "#b07219"
+           "#b07219"
 
         JavaServerPages ->
-            "grey"
+           "grey"
 
         JavaScript ->
-            "#f1e05a"
+           "#f1e05a"
 
         JFlex ->
-            "grey"
+           "grey"
 
         Jison ->
-            "grey"
+           "grey"
 
         JisonLex ->
-            "grey"
+           "grey"
 
         Jolie ->
-            "#843179"
+           "#843179"
 
         JSONiq ->
-            "#40d47e"
+           "#40d47e"
 
         JSX ->
-            "grey"
+           "grey"
 
         Julia ->
-            "#a270ba"
+           "#a270ba"
 
         JupyterNotebook ->
-            "#DA5B0B"
+           "#DA5B0B"
 
         Kotlin ->
-            "#F18E33"
+           "#F18E33"
 
         KRL ->
-            "#28431f"
+           "#28431f"
 
         LabVIEW ->
-            "grey"
+           "grey"
 
         Lasso ->
-            "#999999"
+           "#999999"
 
         Lean ->
-            "grey"
+           "grey"
 
         Lex ->
-            "#DBCA00"
+           "#DBCA00"
 
         LFE ->
-            "grey"
+           "grey"
 
         LilyPond ->
-            "grey"
+           "grey"
 
         Limbo ->
-            "grey"
+           "grey"
 
         LiterateAgda ->
-            "grey"
+           "grey"
 
         LiterateCoffeeScript ->
-            "grey"
+           "grey"
 
         LiterateHaskell ->
-            "grey"
+           "grey"
 
         LiveScript ->
-            "#499886"
+           "#499886"
 
         LLVM ->
-            "#185619"
+           "#185619"
 
         Logos ->
-            "grey"
+           "grey"
 
         Logtalk ->
-            "grey"
+           "grey"
 
         LOLCODE ->
-            "#cc9900"
+           "#cc9900"
 
         LookML ->
-            "#652B81"
+           "#652B81"
 
         LoomScript ->
-            "grey"
+           "grey"
 
         LSL ->
-            "#3d9970"
+           "#3d9970"
 
         Lua ->
-            "#000080"
+           "#000080"
 
         M ->
-            "grey"
+           "grey"
 
         M4 ->
-            "grey"
+           "grey"
 
         M4Sugar ->
-            "grey"
+           "grey"
 
         Makefile ->
-            "#427819"
+           "#427819"
 
         Mako ->
-            "grey"
+           "grey"
 
         Mask ->
-            "#f97732"
+           "#f97732"
 
         Mathematica ->
-            "grey"
+           "grey"
 
         Matlab ->
-            "#e16737"
+           "#e16737"
 
         Max ->
-            "#c4a79c"
+           "#c4a79c"
 
         MAXScript ->
-            "#00a6a6"
+           "#00a6a6"
 
         Mercury ->
-            "#ff2b2b"
+           "#ff2b2b"
 
         Meson ->
-            "#007800"
+           "#007800"
 
         Metal ->
-            "#8f14e9"
+           "#8f14e9"
 
         MiniD ->
-            "grey"
+           "grey"
 
         Mirah ->
-            "#c7a938"
+           "#c7a938"
 
         Modelica ->
-            "grey"
+           "grey"
 
         Modula2 ->
-            "grey"
+           "grey"
 
         ModuleManagementSystem ->
-            "grey"
+           "grey"
 
         Monkey ->
-            "grey"
+           "grey"
 
         Moocode ->
-            "grey"
+           "grey"
 
         MoonScript ->
-            "grey"
+           "grey"
 
         MQL4 ->
-            "#62A8D6"
+           "#62A8D6"
 
         MQL5 ->
-            "#4A76B8"
+           "#4A76B8"
 
         MTML ->
-            "#b7e1f4"
+           "#b7e1f4"
 
         MUF ->
-            "grey"
+           "grey"
 
         Mupad ->
-            "grey"
+           "grey"
 
         Myghty ->
-            "grey"
+           "grey"
 
         NCL ->
-            "#28431f"
+           "#28431f"
 
         Nearley ->
-            "#990000"
+           "#990000"
 
         Nemerle ->
-            "#3d3c6e"
+           "#3d3c6e"
 
         NesC ->
-            "#94B0C7"
+           "#94B0C7"
 
         NetLinx ->
-            "#0aa0ff"
+           "#0aa0ff"
 
         NetLinxERB ->
-            "#747faa"
+           "#747faa"
 
         NetLogo ->
-            "#ff6375"
+           "#ff6375"
 
         NewLisp ->
-            "#87AED7"
+           "#87AED7"
 
         Nim ->
-            "#37775b"
+           "#37775b"
 
         Nit ->
-            "#009917"
+           "#009917"
 
         Nix ->
-            "#7e7eff"
+           "#7e7eff"
 
         NSIS ->
-            "grey"
+           "grey"
 
         Nu ->
-            "#c9df40"
+           "#c9df40"
 
         NumPy ->
-            "grey"
+           "grey"
 
         ObjectiveC ->
-            "#438eff"
+           "#438eff"
 
         ObjectiveCPlusPlus ->
-            "#6866fb"
+           "#6866fb"
 
         ObjectiveJ ->
-            "#ff0c5a"
+           "#ff0c5a"
 
         OCaml ->
-            "#3be133"
+           "#3be133"
 
         Omgrofl ->
-            "#cabbff"
+           "#cabbff"
 
         Ooc ->
-            "#b0b77e"
+           "#b0b77e"
 
         Opa ->
-            "grey"
+           "grey"
 
         Opal ->
-            "#f7ede0"
+           "#f7ede0"
 
         OpenCL ->
-            "grey"
+           "grey"
 
         OpenEdgeABL ->
-            "grey"
+           "grey"
 
         OpenRCrunscript ->
-            "grey"
+           "grey"
 
         OpenSCAD ->
-            "grey"
+           "grey"
 
         Ox ->
-            "grey"
+           "grey"
 
         Oxygene ->
-            "#cdd0e3"
+           "#cdd0e3"
 
         Oz ->
-            "#fab738"
+           "#fab738"
 
         P4 ->
-            "#7055b5"
+           "#7055b5"
 
         Pan ->
-            "#cc0000"
+           "#cc0000"
 
         Papyrus ->
-            "#6600cc"
+           "#6600cc"
 
         Parrot ->
-            "#f3ca0a"
+           "#f3ca0a"
 
         ParrotAssembly ->
-            "grey"
+           "grey"
 
         ParrotInternalRepresentation ->
-            "grey"
+           "grey"
 
         Pascal ->
-            "#E3F171"
+           "#E3F171"
 
         PAWN ->
-            "#dbb284"
+           "#dbb284"
 
         Pep8 ->
-            "#C76F5B"
+           "#C76F5B"
 
         Perl ->
-            "#0298c3"
+           "#0298c3"
 
         Perl6 ->
-            "#0000fb"
+           "#0000fb"
 
         PHP ->
-            "#4F5D95"
+           "#4F5D95"
 
         PicoLisp ->
-            "grey"
+           "grey"
 
         PigLatin ->
-            "#fcd7de"
+           "#fcd7de"
 
         Pike ->
-            "#005390"
+           "#005390"
 
         PLpgSQL ->
-            "grey"
+           "grey"
 
         PLSQL ->
-            "#dad8d8"
+           "#dad8d8"
 
         PogoScript ->
-            "#d80074"
+           "#d80074"
 
         Pony ->
-            "grey"
+           "grey"
 
         PostScript ->
-            "#da291c"
+           "#da291c"
 
         POVRaySDL ->
-            "grey"
+           "grey"
 
         PowerBuilder ->
-            "#8f0f8d"
+           "#8f0f8d"
 
         PowerShell ->
-            "#012456"
+           "#012456"
 
         Processing ->
-            "#0096D8"
+           "#0096D8"
 
         Prolog ->
-            "#74283c"
+           "#74283c"
 
         PropellerSpin ->
-            "#7fa2a7"
+           "#7fa2a7"
 
         Puppet ->
-            "#302B6D"
+           "#302B6D"
 
         PureBasic ->
-            "#5a6986"
+           "#5a6986"
 
         PureScript ->
-            "#1D222D"
+           "#1D222D"
 
         Python ->
-            "#3572A5"
+           "#3572A5"
 
         Pythonconsole ->
-            "grey"
+           "grey"
 
         QMake ->
-            "grey"
+           "grey"
 
         QML ->
-            "#44a51c"
+           "#44a51c"
 
         R ->
-            "#198CE7"
+           "#198CE7"
 
         Racket ->
-            "#22228f"
+           "#22228f"
 
         Ragel ->
-            "#9d5200"
+           "#9d5200"
 
         RAML ->
-            "#77d9fb"
+           "#77d9fb"
 
         Rascal ->
-            "#fffaa0"
+           "#fffaa0"
 
         REALbasic ->
-            "grey"
+           "grey"
 
         Reason ->
-            "grey"
+           "grey"
 
         Rebol ->
-            "#358a5b"
+           "#358a5b"
 
         Red ->
-            "#f50000"
+           "#f50000"
 
         Redcode ->
-            "grey"
+           "grey"
 
         RenPy ->
-            "#ff7f7f"
+           "#ff7f7f"
 
         RenderScript ->
-            "grey"
+           "grey"
 
         REXX ->
-            "grey"
+           "grey"
 
         Ring ->
-            "#0e60e3"
+           "#0e60e3"
 
         RobotFramework ->
-            "grey"
+           "grey"
 
         Roff ->
-            "#ecdebe"
+           "#ecdebe"
 
         Rouge ->
-            "#cc0088"
+           "#cc0088"
 
         Ruby ->
-            "#701516"
+           "#701516"
 
         RUNOFF ->
-            "#665a4e"
+           "#665a4e"
 
         Rust ->
-            "#dea584"
+           "#dea584"
 
         Sage ->
-            "grey"
+           "grey"
 
         SaltStack ->
-            "#646464"
+           "#646464"
 
         SAS ->
-            "#B34936"
+           "#B34936"
 
         Scala ->
-            "#c22d40"
+           "#c22d40"
 
         Scheme ->
-            "#1e4aec"
+           "#1e4aec"
 
         Scilab ->
-            "grey"
+           "grey"
 
         Self ->
-            "#0579aa"
+           "#0579aa"
 
         ShaderLab ->
-            "grey"
+           "grey"
 
         Shell ->
-            "#89e051"
+           "#89e051"
 
         ShellSession ->
-            "grey"
+           "grey"
 
         Shen ->
-            "#120F14"
+           "#120F14"
 
         Slash ->
-            "#007eff"
+           "#007eff"
 
         Smali ->
-            "grey"
+           "grey"
 
         Smalltalk ->
-            "#596706"
+           "#596706"
 
         Smarty ->
-            "grey"
+           "grey"
 
         SMT ->
-            "grey"
+           "grey"
 
         SourcePawn ->
-            "#5c7611"
+           "#5c7611"
 
         SQF ->
-            "#3F3F3F"
+           "#3F3F3F"
 
         SQLPL ->
-            "grey"
+           "grey"
 
         Squirrel ->
-            "#800000"
+           "#800000"
 
         SRecodeTemplate ->
-            "#348a34"
+           "#348a34"
 
         Stan ->
-            "#b2011d"
+           "#b2011d"
 
         StandardML ->
-            "#dc566d"
+           "#dc566d"
 
         Stata ->
-            "grey"
+           "grey"
 
         SuperCollider ->
-            "#46390b"
+           "#46390b"
 
         Swift ->
-            "#ffac45"
+           "#ffac45"
 
         SystemVerilog ->
-            "#DAE1C2"
+           "#DAE1C2"
 
         Tcl ->
-            "#e4cc98"
+           "#e4cc98"
 
         Tcsh ->
-            "grey"
+           "grey"
 
         Terra ->
-            "#00004c"
+           "#00004c"
 
         TeX ->
-            "#3D6117"
+           "#3D6117"
 
         Thrift ->
-            "grey"
+           "grey"
 
         TIProgram ->
-            "#A0AA87"
+           "#A0AA87"
 
         TLA ->
-            "grey"
+           "grey"
 
         Turing ->
-            "#cf142b"
+           "#cf142b"
 
         TXL ->
-            "grey"
+           "grey"
 
         TypeScript ->
-            "#2b7489"
+           "#2b7489"
 
         UnifiedParallelC ->
-            "grey"
+           "grey"
 
         UnixAssembly ->
-            "grey"
+           "grey"
 
         Uno ->
-            "grey"
+           "grey"
 
         UnrealScript ->
-            "#a54c4d"
+           "#a54c4d"
 
         UrWeb ->
-            "grey"
+           "grey"
 
         Vala ->
-            "#fbe5cd"
+           "#fbe5cd"
 
         VCL ->
-            "grey"
+           "grey"
 
         Verilog ->
-            "#b2b7f8"
+           "#b2b7f8"
 
         VHDL ->
-            "#adb2cb"
+           "#adb2cb"
 
         Vimscript ->
-            "#199f4b"
+           "#199f4b"
 
         VisualBasic ->
-            "#945db7"
+           "#945db7"
 
         Volt ->
-            "#1F1F1F"
+           "#1F1F1F"
 
         Vue ->
-            "#2c3e50"
+           "#2c3e50"
 
         WebAssembly ->
-            "#04133b"
+           "#04133b"
 
         WebIDL ->
-            "grey"
+           "grey"
 
         Wisp ->
-            "#7582D1"
+           "#7582D1"
 
         X10 ->
-            "#4B6BEF"
+           "#4B6BEF"
 
         XBase ->
-            "#403a40"
+           "#403a40"
 
         XC ->
-            "#99DA07"
+           "#99DA07"
 
         Xojo ->
-            "grey"
+           "grey"
 
         XProc ->
-            "grey"
+           "grey"
 
         XQuery ->
-            "#5232e7"
+           "#5232e7"
 
         XS ->
-            "grey"
+           "grey"
 
         XSLT ->
-            "#EB8CEB"
+           "#EB8CEB"
 
         Xtend ->
-            "grey"
+           "grey"
 
         Yacc ->
-            "#4B6C4B"
+           "#4B6C4B"
 
         Zephir ->
-            "#118f9e"
+           "#118f9e"
 
         Zimpl ->
-            "grey"
+           "grey"
 
         Other ->
             "grey"
